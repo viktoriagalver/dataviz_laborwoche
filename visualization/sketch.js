@@ -31,27 +31,27 @@ function draw() {
   
   const tempMin = 25;
   const tempMax = 30;
-  let tempColor = temp < tempMin ? 0 : temp > tempMax ? color(255, 0, 0) : color(`hsb(0, 100%, ${map(temp, tempMin, tempMax, 0, 100)}%)`);
+  let tempColor = temp < tempMin ? 0 : temp > tempMax ? color(255, 0, 0) : color(`hsb(311, 100%, ${map(temp, tempMin, tempMax, 0, 100)}%)`);
 
   background(tempColor);
 
   if (hum < gas) {
-    stroke(34, 128, 27);
+    stroke(51, 24, 46);
     strokeWeight(6);
-    fill(70, 179, 62);
+    fill(99, 73, 94);
     ellipse(x, y, gas, gas);
-    stroke(0, 153, 255);
+    stroke(99, 31, 120);
     strokeWeight(6);
-    fill(88, 187, 237);
+    fill(178, 92, 204);
     ellipse(x, y, hum, hum);
   } else {
-    stroke(0, 153, 255);
+    stroke(99, 31, 120);
     strokeWeight(6);
-    fill(88, 187, 237);
+    fill(178, 92, 204);
     ellipse(x, y, hum, hum);
-    stroke(34, 128, 27);
+    stroke(51, 24, 46);
     strokeWeight(6);
-    fill(70, 179, 62);
+    fill(99, 73, 94);
     ellipse(x, y, gas, gas);
   }
 }
